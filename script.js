@@ -16,11 +16,17 @@ const btn_multi = document.querySelector('#four');
 
 let multiplicateur_amount = 1;
 
+  compteur -= 50
+
 function buy_multi(event) {
-    multiplicateur_amount += 1
-    document.querySelector('#multiplier').innerHtml = multiplicateur_amount
-    point_par_clic += 1
-    compteur -= 50
+    if(compteur >=50){
+        multiplicateur_amount += 1
+        document.querySelector('#multiplier').innerHtml = multiplicateur_amount
+        point_par_clic += 1
+        compteur -= 50
+    } else {
+        alert('BAHAHAHA IL EST PAUVRE POINTEZ LE DU DOIGT BAAAAHAHAHAHAH')
+    }
 }
 
 btn_multi.addEventListener('click', buy_multi)
